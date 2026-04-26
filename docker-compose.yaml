@@ -1,8 +1,10 @@
 services:
   bot:
-    # Upstream prebuilt image. To use your own fork's image, replace with:
-    #   ghcr.io/<your-username>/remnawave-telegram-shop-bot:latest
-    image: ghcr.io/jolymmiels/remnawave-telegram-shop-bot:latest
+    # Pulls the fork's auto-built image (built by GitHub Actions in
+    # pkramamd-ai/remnawave-telegram-shop on every push to main).
+    # Switch back to upstream by replacing with:
+    #   ghcr.io/jolymmiels/remnawave-telegram-shop-bot:latest
+    image: ghcr.io/pkramamd-ai/remnawave-telegram-shop-bot:latest
     container_name: vpn-shop-bot
     restart: unless-stopped
     env_file:
